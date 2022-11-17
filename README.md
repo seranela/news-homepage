@@ -9,11 +9,7 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -27,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/news-homepage-IPy5jY4lVB](https://www.frontendmentor.io/solutions/news-homepage-IPy5jY4lVB)
+- Live Site URL: [https://seranela.github.io/news-homepage/](https://seranela.github.io/news-homepage/)
 
 ## My process
 
@@ -40,14 +36,6 @@ Users should be able to:
 - CSS Grid
 - JavaScript
 - Mobile-first workflow
-
-### What I learned
-
-
-
-### Continued development
-
-
 
 ## Author
 
