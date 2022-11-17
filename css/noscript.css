@@ -1,0 +1,18 @@
+.nav-main-button {
+  display: none;
+}
+
+.nav-main {
+  display: block;
+  position: unset;
+  background-color: unset;
+}
+
+.nav-main-list {
+  flex-direction: row;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+  padding-right: 0.2rem;
+  height: unset;
+}
