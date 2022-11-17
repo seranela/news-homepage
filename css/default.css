@@ -1,0 +1,345 @@
+:root {
+  --color-primary-soft-orange: hsl(35, 77%, 62%);
+  --color-primary-soft-red: hsl(5, 85%, 63%);
+  --color-primary-soft-red-alt: hsl(5, 73%, 51%);
+  --color-neutral-off-white: hsl(36, 100%, 99%);
+  --color-neutral-gray-blue: hsl(233, 8%, 79%);
+  --color-neutral-dark-gray-blue: hsl(236, 13%, 42%);
+  --color-neutral-extra-dark-blue: hsl(240, 100%, 5%);
+  --font-family: 'Inter', sans-serif; /* 400, 700, 800 */
+}
+
+html {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font: 400 0.9375rem var(--font-family);
+  background-color: var(--color-neutral-off-white);
+  margin: 0;
+  padding: 1.8rem 1rem;
+  min-height: 100vh;
+  max-width: 72rem;
+  gap: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+picture {
+  display: flex; /* Used with object-fit to fix odd image sizing/fitting issue */
+}
+
+picture img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  width: 3rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content(100%) fit-content(100%) fit-content(100%);
+  gap: 4rem;
+}
+
+/* Navigation */
+
+.nav-main-button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: url(../assets/images/icon-menu.svg) center / contain no-repeat;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav-main-button-close {
+  background: url(../assets/images/icon-menu-close.svg) center / contain no-repeat;
+}
+
+.nav-main {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.4);
+}
+
+.nav-main-show {
+  display: block;
+}
+
+.nav-main-list {
+  background-color: var(--color-neutral-off-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  list-style: none;
+  margin: 0;
+  padding-left: 1.5em;
+  padding-top: 25%;
+  margin-left: 20%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.nav-main a {
+  text-decoration: none;
+  color: var(--color-neutral-dark-gray-blue);
+}
+
+.nav-main a:hover {
+  color: var(--color-primary-soft-red);
+}
+
+/* Main News */
+
+.news-main {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.news-main-heading {
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0.4em 0;
+}
+
+.news-main-body p {
+  line-height: 1.7;
+  color: var(--color-neutral-dark-gray-blue);
+  padding-bottom: 0.5em;
+}
+
+.link-button {
+  display: inline-block;
+  background-color: var(--color-primary-soft-red-alt);
+  color: white;
+  padding: 1.2em 2.3em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+
+.link-button:hover {
+  background-color: var(--color-neutral-extra-dark-blue);
+}
+
+/* New Section */
+
+.news-new {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: var(--color-neutral-extra-dark-blue);
+  padding: 1rem;
+}
+
+.news-new article:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-neutral-dark-gray-blue);
+}
+
+.news-new h2 {
+  color: var(--color-primary-soft-orange);
+  font-size: 1.9rem;
+  margin-top: 0.2em;
+}
+
+.news-new h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7em;
+}
+
+.news-new h3 a {
+  color: var(--color-neutral-off-white);
+}
+
+.news-new h3 a:hover {
+  color: var(--color-primary-soft-orange);
+}
+
+.news-new p {
+  color: var(--color-neutral-gray-blue);
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+/* Bottom Articles */
+
+.news-bottom {
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.news-bottom > article {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.news-bottom-heading {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0.3em 0;
+}
+
+.news-bottom-heading a {
+  color: var(--color-neutral-extra-dark-blue);
+}
+
+.news-bottom-heading a:hover {
+  color: var(--color-primary-soft-red);
+}
+
+.news-bottom > article img {
+  object-fit: cover;
+  object-position: center;
+  width: 30%;
+}
+
+.news-bottom > article div {
+  width: 70%;
+}
+
+.news-bottom > article div p {
+  line-height: 1.7;
+  margin: 0;
+}
+
+.article-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-neutral-dark-gray-blue);
+}
+
+/* Screen readers */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* Responsive media queries */
+
+@media (min-width: 768px) {
+  body > header {
+    padding: 1.5rem 0;
+  }
+
+  .logo {
+    width: 4rem;
+  }
+  
+  .nav-main-button {
+    display: none;
+  }
+
+  .nav-main {
+    display: block;
+    position: unset;
+    background-color: unset;
+  }
+
+  .nav-main-list {
+    flex-direction: row;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+    padding-right: 0.2rem;
+    height: unset;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: fit-content(100%) fit-content(100%) fit-content(100%);
+    gap: 2rem;
+  }
+
+  .news-main {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content(100%) fit-content(100%);
+    gap: 2rem;
+  }
+
+  .news-main-list {
+    font-size: 1.2rem;
+  }
+
+  .news-main-picture {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .news-main-heading {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 3.5rem;
+    margin-top: 0;
+  }
+
+  .news-main-body {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+  }
+
+  .news-main-body p {
+    margin-top: 0;
+  }
+
+  .news-new {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .news-bottom {
+    grid-column: 1 / span 3;
+    flex-direction: row;
+  }
+
+  .news-bottom article {
+    flex: 1;
+  }
+}
